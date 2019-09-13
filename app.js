@@ -1,7 +1,13 @@
 const express= require('express');
 const app=express();
-const port=3000
+const port=3000;
+const authRoutes=require('./routes/oauth-routes');
+
+
 app.set('view engine','ejs');
+
+//setting up the routes
+app.use('/auth',authRoutes)
 
 app.get('/',(req,res)=>{
 
