@@ -10,8 +10,6 @@ app.set('view engine','ejs');
 app.use('/auth',authRoutes)
 
 app.get('/',(req,res)=>{
-
-    console.log(res)
     res.render('home');
 })
 
