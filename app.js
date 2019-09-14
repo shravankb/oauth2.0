@@ -3,12 +3,20 @@ const app=express();
 const port=3000;
 const authRoutes=require('./routes/oauth-routes');
 const passportSetup=require('./config/passport-setup');
+const mongoose= require('mongoose')
+const keys= require('./config/keys')
+
 
 app.set('view engine','ejs');
 
 //setting up the routes
 app.use('/auth',authRoutes)
 
+
+//connect to mongodb
+mongoose.connect(keys.mongodb.dbUrl,() =>{
+    console.log('Connected to MongoDB');
+})
 
 
 
