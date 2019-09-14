@@ -11,10 +11,11 @@ passport.use(
     clientID:keys.google.clientID,
     clientSecret:keys.google.clientSecret
 }, ()=>{
-//passport callback function
+
+    //passport callback function
 
 })
-)
+);
 
 
 
