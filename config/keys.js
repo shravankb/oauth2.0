@@ -8,5 +8,7 @@ module.exports = {
 
     mongodb: {
         dbUrl:'mongodb://localhost:27017/oauth'
-    }
+    },
+
+    'secret':'howareyou',
 };
